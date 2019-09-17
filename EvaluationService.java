@@ -30,44 +30,9 @@ public class EvaluationService {
 	 * @return
 	 */
 	public String acronym(String phrase) {
-		
-		/* TODO Write an implementation for this method declaration
-		 * 
-		need select first non empty character in array, then itereate through string selecting
-		first character proceeded by an empty character (space) select it 
-		then combine them into a virable and return it 
-		
-		int counter = 0
-				char [] compare = phrase.toCharArray(); //this converts the string into a char array
-		
-		while ( counter <= compare.length())
-		{	
-			if (compare[0] == ' ')
-				{counter ++;}
-			if (compare[0] ! ' ')
-				{compare[counter]			
-				}		
+		// TODO Write an implementation for this method declaration
 		return null;
 	}
-		     String acronym = "";
-		    String basic() {
-		        acronym += phrase.toUpperCase().charAt(0);
-		        for (int i = 1; i <= phrase.length() - 1; i++) {
-		            if (phrase.charAt(i - 1) == ' ' || phrase.charAt(i - 1) == '-') {
-		                acronym += phrase.toUpperCase().charAt(i);
-		            }
-		        }
-		        return acronym;
-		    }
-	}
-	*/
-		
-		
-		
-
-return result;
-	
-		
 
 	/**
 	 * 3. Determine if a triangle is equilateral, isosceles, or scalene. An
@@ -94,29 +59,6 @@ return result;
 			this.sideThree = sideThree;
 		}
 
-		/*
-		 * need to determine what kind of triangle
-		 * compare the sides to one another to determie if any of them are equal
-		 * 
-		 */
-		switch (sideOne == sideTwo & sideTwo==sideThree) {
-		case 1:
-			System.out.println("This is an equilateral triangel");
-	    break;
-		}
-		switch (sideOne == sideTwo | sideOne == SideThree | sideTwo == SideThree) {
-		case 1:
-			System.out.println("This is an isoscles triangel");
-	    break;
-		}
-		switch (sideOn != sideTwo & sideTwo != sideThree | sideThree != sideOne) {
-		case 1:
-			System.out.println("This is an Scalene triangel");
-	    break;
-		}
-		
-		
-		
 		public double getSideOne() {
 			return sideOne;
 		}
@@ -143,8 +85,6 @@ return result;
 
 		public boolean isEquilateral() {
 			// TODO Write an implementation for this method declaration
-			
-			
 			return false;
 		}
 
@@ -157,8 +97,6 @@ return result;
 			// TODO Write an implementation for this method declaration
 			return false;
 		}
-		
-		
 
 	}
 
@@ -213,40 +151,9 @@ return result;
 	 * Note: As this exercise only deals with telephone numbers used in
 	 * NANP-countries, only 1 is considered a valid country code.
 	 */
-	final String cleanPhoneNumber(String string) {
+	public String cleanPhoneNumber(String string) {
 		// TODO Write an implementation for this method declaration
-		boolean countryCodeSearch=false;
-		char[] number = new char[10];
-		int numLoc = 0;
-		char[] originalNumber = string.toCharArray();
-		char placeHolder = ' ';
-		
-		for(int i=0; i < originalNumber.length; i++) {
-			placeHolder = originalNumber[i];
-			switch(placeHolder) {
-				case '1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'0': {
-					if (countryCodeSearch == false & originalNumber[i]=='1') {
-					}
-					
-					else {
-						number[numLoc] = originalNumber[i];
-						numLoc++;
-					}
-				countryCodeSearch = true;
-				
-				}
-				default:break;
-			}
-
-		}
-		
-		if(number[9] != ' ' )
-			return "Not a valid Number";
-		else
-			 return new String(number);
-		
-		
-	
+		return null;
 	}
 
 	/**
@@ -598,7 +505,6 @@ return result;
 	 * @return
 	 */
 	public boolean isLuhnValid(String string) {
-	}
 		// TODO Write an implementation for this method declaration
 		return false;
 	}
