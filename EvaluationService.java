@@ -1,12 +1,8 @@
 package com.revature.eval.java.core;
 
 import java.time.temporal.Temporal;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class EvaluationService {
 
@@ -33,46 +29,10 @@ public class EvaluationService {
 	 * @param phrase
 	 * @return
 	 */
-	public int acronym(String phrase) {
-		
-		/* TODO Write an implementation for this method declaration
-		 * 
-		need select first non empty character in array, then itereate through string selecting
-		first character proceeded by an empty character (space) select it 
-		then combine them into a virable and return it 
-		
-		int counter = 0
-				char [] compare = phrase.toCharArray(); //this converts the string into a char array
-		
-		while ( counter <= compare.length())
-		{	
-			if (compare[0] == ' ')
-				{counter ++;}
-			if (compare[0] ! ' ')
-				{compare[counter]			
-				}		
+	public String acronym(String phrase) {
+		// TODO Write an implementation for this method declaration
 		return null;
 	}
-		     String acronym = "";
-		    String basic() {
-		        acronym += phrase.toUpperCase().charAt(0);
-		        for (int i = 1; i <= phrase.length() - 1; i++) {
-		            if (phrase.charAt(i - 1) == ' ' || phrase.charAt(i - 1) == '-') {
-		                acronym += phrase.toUpperCase().charAt(i);
-		            }
-		        }
-		        return acronym;
-		    }
-	}
-	*/
-		
-		
-		
-		
-
-return result;
-	
-		
 
 	/**
 	 * 3. Determine if a triangle is equilateral, isosceles, or scalene. An
@@ -99,14 +59,6 @@ return result;
 			this.sideThree = sideThree;
 		}
 
-		/*
-		 * need to determine what kind of triangle
-		 * compare the sides to one another to determie if any of them are equal
-		 * 
-		 */
-	
-		
-		
 		public double getSideOne() {
 			return sideOne;
 		}
@@ -132,34 +84,19 @@ return result;
 		}
 
 		public boolean isEquilateral() {
-			boolean lateral;
-					if(sideOne == sideTwo & sideTwo == sideThree & sideOne == sideThree)
-					{
-						boolean Lateral = true;
-					}
-			return lateral;
+			// TODO Write an implementation for this method declaration
+			return false;
 		}
 
 		public boolean isIsosceles() {
 			// TODO Write an implementation for this method declaration
-			boolean iso;
-			if(sideOne = sideTwo | sideTwo == sideThree |  sideOne == sideThree) 
-			{
-				boolean Lateral = true;
-			}
-			
-			
 			return false;
 		}
 
 		public boolean isScalene() {
-			boolean scalene;
-			if(sideOne != sideTwo & != sideThree != sideOne | sideTwo != sideThree)
 			// TODO Write an implementation for this method declaration
 			return false;
 		}
-		
-		
 
 	}
 
@@ -179,58 +116,8 @@ return result;
 	 * @return
 	 */
 	public int getScrabbleScore(String string) {
-		//Map<Integer, String> scrabble;
-		//char [] scabArray = string.toCharArray();
-		int sum = 0;
-		for(int i = 0; i < string.length(); i++)
-		{ 
-			char[] inputstring = string.toCharArray();
-			char[] value1 ="abioulrst".toCharArray(); // char arrays that contain all the potentional value groups
-			char[] value2 = "g".toCharArray();
-			char[] value3 = "bcmp".toCharArray();
-			char[] value4 = "fhvwy".toCharArray();
-			char[] value5 = "k".toCharArray();
-			char[] value8 = "jx".toCharArray();
-			char[] value10 = "z".toCharArray();    // have to run against these values to add up score
-			
-			boolean hasSameChar(string){
-				  for(value1 : string.toCharArray()){
-				    if(string.indexOf(i) < 0 ) return false;
-				  }
-				
-				  return true;
-				}
-			
-			int value = 0;
-			if(value1.includes(string)) {
-				value = 1;
-				sum = sum + value;
-			}
-			if(string.charAt(i).contains("g")){
-				value = 2;
-				sum = sum +value;
-			}
-			if(scabArray.charAt(i).contains("b","c","m","p")){
-				value = 3;
-				sum  = sum + value;
-			}
-			if(scabArray.charAt(i).contains("f","h","v","w","y")){
-				value = 4;
-				sum = sum + value; 
-			}
-			if(scabArray.charAt(i).contains("k")){
-				value = 5;
-				sum = sum + value;
-		    }
-			if(scabArray.charAt(i).contains("j", "X")){
-				value = 8;
-				sum = sum + value;
-			}
-			if(scabArray.charAt(i).contains("z"){
-				value = 10;
-				sum = sum + value;
-			}
-		return sum;
+		// TODO Write an implementation for this method declaration
+		return 0;
 	}
 
 	/**
@@ -264,40 +151,9 @@ return result;
 	 * Note: As this exercise only deals with telephone numbers used in
 	 * NANP-countries, only 1 is considered a valid country code.
 	 */
-	final String cleanPhoneNumber(String string) {
+	public String cleanPhoneNumber(String string) {
 		// TODO Write an implementation for this method declaration
-		boolean countryCodeSearch=false;
-		char[] number = new char[10];
-		int numLoc = 0;
-		char[] originalNumber = string.toCharArray();
-		char placeHolder = ' ';
-		
-		for(int i=0; i < originalNumber.length; i++) {
-			placeHolder = originalNumber[i];
-			switch(placeHolder) {
-				case '1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'0': {
-					if (countryCodeSearch == false & originalNumber[i]=='1') {
-					}
-					
-					else {
-						number[numLoc] = originalNumber[i];
-						numLoc++;
-					}
-				countryCodeSearch = true;
-				
-				}
-				default:break;
-			}
-
-		}
-		
-		if(number[9] != ' ' )
-			return "Not a valid Number";
-		else
-			 return new String(number.toString());
-		
-		
-	
+		return null;
 	}
 
 	/**
@@ -310,36 +166,7 @@ return result;
 	 * @return
 	 */
 	public Map<String, Integer> wordCount(String string) {
-		/* TODO Write an implementation for this method declaration
-	    List<String> output = new ArrayList<>();
-	    List<Integer> count = new ArrayList<>();
-	    findWords(string, output, count);
-	    System.out.println(output);
-	    System.out.println(count);
-	}
-*/
-		  String[] stringArrays = string.split(" ");
-		    Map<String, Integer> map = new HashMap<String, Integer>(); 
-		    Set<String> words = new HashSet<String>(Arrays.asList(stringArrays)); //sets the String portion of the Map pair
-		    int count = 0;
-		    for (String word : words) //iteraters through the list of strings			
-		        for (String temp : stringArrays) {  
-		            if (word.equals(temp)) {
-		                ++count;
-		            }
-		        }
-		        map.put(word, count); 					// this sets the format of the key pairs from the virables above
-		        count = 0;
-		    }
-
-		    return map;
-		
-	
-	}
-		
-		
-		
-		
+		// TODO Write an implementation for this method declaration
 		return null;
 	}
 
@@ -511,22 +338,9 @@ return result;
 	 * @param i
 	 * @return
 	 */
-	public int calculateNthPrime(int n) {
+	public int calculateNthPrime(int i) {
 		// TODO Write an implementation for this method declaration
-		  for(int i = 2, int x = 2; i <= n; i++) {
-	            for(x = 2; x < i; x++) {				
-	                if(i % x == 0) {
-	                    break;
-	                }
-	            }
-	            if(x == i) {
-	                System.out.printf("\n%d is prime", x); //\n makes new lines and %d formats Integaers
-	            }
-		  }
-		
-		
-		
-		return x;
+		return 0;
 	}
 
 	/**
@@ -562,60 +376,8 @@ return result;
 		 * @return
 		 */
 		public static String encode(String string) {
-
-//String alphabit [Interger] = new String();
-			
-/*			char [] cypher = {'z','y','x','w','v','u','t','s','r','q','p','o','n','m','l','k','h','g','f','e','d','c','b','a'}
-for(int i = 0; i < cypher.length(); i++ )
-{
-	//a needs to be index of cypher array
-	
-	if (s2.indexOf(s1.charAt(i)) ==
-				
-			byte [] strAsByteArray = new string.getBytes(); 
-			  
-	        byte [] result =  
-	                   new byte [strAsByteArray.length]; 
-	
-			 for (int i = 0; i<strAsByteArray.length; i++) 
-		            result[i] =  
-		             strAsByteArray[strAsByteArray.length-i-1]; 
-		  
-		        System.out.println(new String(result)); 
-	
-	
-			 for(int i = string.length() - 1; i >= 0; i--)
-		        {
-		            string reverse = reverse + string.charAt(i);
-		        }
-			 
-	return string;
-		}
-					
-			StringBuilder sb = new StringBuilder();
-	        
-	        for(int i = string.length() - 1; i >= 0; i--) //-1 so no out of bounds exception???
-	        {
-	            sb.append(string.charAt(i));
-	        }
-			return string;
-			*/
-			
-			char[] temparray = string.toCharArray(); 
-	        int left, right=0; 
-	        right = temparray.length-1; 
-	  
-	        for (left=0; left < right ; left++ ,right--) 
-	        { 
-	            // Swap values of left and right 
-	            char temp = temparray[left]; 
-	            temparray[left] = temparray[right]; 
-	            temparray[right]=temp; 
-	        } 
-			
-			
-			return temp;
-			
+			// TODO Write an implementation for this method declaration
+			return null;
 		}
 
 		/**
@@ -653,15 +415,9 @@ for(int i = 0; i < cypher.length(); i++ )
 	 * @return
 	 */
 	public boolean isValidIsbn(String string) {
-		
-		
-		
-		
-	}
-	}
 		// TODO Write an implementation for this method declaration
 		return false;
-	
+	}
 
 	/**
 	 * 16. Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan
@@ -691,12 +447,6 @@ for(int i = 0; i < cypher.length(); i++ )
 	 */
 	public Temporal getGigasecondDate(Temporal given) {
 		// TODO Write an implementation for this method declaration
-		
-		int live = math.pow(10,9)
-				if(seconds == live) {
-					
-				}
-				while(live <= temporal. )
 		return null;
 	}
 
@@ -755,7 +505,6 @@ for(int i = 0; i < cypher.length(); i++ )
 	 * @return
 	 */
 	public boolean isLuhnValid(String string) {
-	}
 		// TODO Write an implementation for this method declaration
 		return false;
 	}
